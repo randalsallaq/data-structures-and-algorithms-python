@@ -23,7 +23,7 @@ def binary_search(array,key):
         if key < array[mid]:
             mid = mid // 2
         if key > array[mid]:
-            mid = array_index-mid  
+            mid = array_index
 
     return mid  
 
