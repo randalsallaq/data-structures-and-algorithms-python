@@ -18,6 +18,6 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 - if rhe value is less thsn **mid** then we will divide it by 2 
 
 
-![array](./././assets/binary_search2.jpg)
+![array](../assets/binary_search2.jpg)
 
  
