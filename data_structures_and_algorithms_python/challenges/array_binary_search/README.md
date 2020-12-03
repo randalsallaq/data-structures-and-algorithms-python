@@ -17,7 +17,7 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 - if rhe value is bigger thsn **mid** then we will decrease mid 
 - if rhe value is less thsn **mid** then we will divide it by 2 
 
+<img src= '/assets/binary_search2.jpg' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
-![array](./././assets/binary_search2.jpg)
 
  
