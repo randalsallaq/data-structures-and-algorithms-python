@@ -20,4 +20,5 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 <img src= '/assets/binary_search2.jpg' style = 'display: block; margin-left: auto;   margin-right: auto; width: 50%; '>
 
 
+
  
