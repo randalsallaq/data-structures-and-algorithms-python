@@ -8,8 +8,6 @@ def test_binary():
     expected = 2
     assert actual == expected
     
-
-
 def test_binary_not():
     a = [5,10,15,20,25]
     b = 30
