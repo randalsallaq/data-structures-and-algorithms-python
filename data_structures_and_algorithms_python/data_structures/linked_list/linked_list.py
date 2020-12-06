@@ -30,10 +30,10 @@ class LinkedList:
             return False
 
     def __str__(self):
-        list_str = ''
+        list_str = ''       #another way[]
         current = self.head
         while current:
-            # print(current, "current")
+            
             list_str += str(current.value ) + ', '
             current = current.next
         return list_str[:-2]
@@ -85,7 +85,7 @@ class LinkedList:
         else:
             return 'There is no value'
 
-    def length_(self):
+    def length(self):
         length = 0
         current = self.head
         while current:
@@ -93,21 +93,18 @@ class LinkedList:
             current = current.next
         return length
 
-    def kth_from_end(self, k):
-        length = self.length_()
+    def from_end(self, value):
+        length = self.length()
 
-        if not -length <= k < length:
-            raise Exception("k not in the range")
+        count = None
 
-        step_count = None
-
-        if k >= 0:
-            step_count = length - k -1
-        if k < 0:
-            step_count = abs(k)-1
+        if value >= 0:
+            count = length - value -1
+        if value < 0:
+            count = abs(value)-1
 
         current = self.head
-        for _ in range(step_count):
+        for _ in range(count):
             current = current.next
         return current.value
 
