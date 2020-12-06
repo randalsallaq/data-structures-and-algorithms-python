@@ -1,4 +1,4 @@
-# Implementation: Singly Linked Lists
+# Linked Lists
 Linked List is a linear data structure.
 It is a series of connected "nodes" that contains the "address" of the next node. Each node can store a data point which may be a number, a string or any other type of data.
 
