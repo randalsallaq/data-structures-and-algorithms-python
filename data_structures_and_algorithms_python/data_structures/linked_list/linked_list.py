@@ -36,13 +36,11 @@ class LinkedList:
             
             list_str += str(current.value ) + ', '
             current = current.next
-        return list_str[:-2]
+        return list_str
 
     def append(self, value):
         current = self.head
         while current:
-
-
             print(current.value)
             if current.next == None:
                 current.next = Node(value)
@@ -52,6 +50,8 @@ class LinkedList:
 
         self.head = Node(value)
         return self.__str__()
+
+
 
     def insert_before(self, value, new_value):
         if self.includes(value):
@@ -69,7 +69,10 @@ class LinkedList:
                 previous = current
                 current = current.next
         else:
-            return 'Value is not in the list'
+            return 'There is no value'
+
+
+
 
 
     def insert_after(self, value, new_value):
@@ -85,26 +88,5 @@ class LinkedList:
         else:
             return 'There is no value'
 
-    def length(self):
-        length = 0
-        current = self.head
-        while current:
-            length+=1
-            current = current.next
-        return length
 
-    def from_end(self, value):
-        length = self.length()
-
-        count = None
-
-        if value >= 0:
-            count = length - value -1
-        if value < 0:
-            count = abs(value)-1
-
-        current = self.head
-        for _ in range(count):
-            current = current.next
-        return current.value
 
