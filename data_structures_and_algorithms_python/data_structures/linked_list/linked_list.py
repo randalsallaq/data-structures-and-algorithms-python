@@ -36,7 +36,7 @@ class LinkedList:
             
             list_str += str(current.value ) + ', '
             current = current.next
-        return list_str[:-2]
+        return list_str
 
     def append(self, value):
         current = self.head
