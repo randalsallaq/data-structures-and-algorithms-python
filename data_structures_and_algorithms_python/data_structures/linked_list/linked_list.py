@@ -1,47 +1,41 @@
 class Node:
-    def __init__(self,value):
+    def __init__(self, value):
         self.value = value
         self.next = None
-
-
 
 class LinkedList:
     def __init__(self):
         self.head = None
-       
-
-
 
     def __repr__(self):
-        return "create linked list"
+        return "LinkedList created"
 
-
-    def insert(self,value):
+    def insert(self, value):
         node = Node(value)
         node.next = self.head
         self.head = node
-
+#########
     def includes(self, value):
-        current_value = self.head
-        while current_value:
-            if current_value.value == value:
-                return True
-            else:
-                current_value = current_value.next
-            return False
-
-    def __str__(self):
-        list_str = ''       #another way[]
         current = self.head
         while current:
-            
+            if current.value == value:
+                return True
+            else:
+                current = current.next
+        return False
+########
+    def __str__(self):
+        list_str = ''
+        current = self.head
+        while current:
             list_str += str(current.value ) + ', '
             current = current.next
-        return list_str
+        return list_str[:-2]
 
     def append(self, value):
         current = self.head
         while current:
+
             print(current.value)
             if current.next == None:
                 current.next = Node(value)
@@ -51,8 +45,6 @@ class LinkedList:
 
         self.head = Node(value)
         return self.__str__()
-
-
 
     def insert_before(self, value, new_value):
         if self.includes(value):
@@ -70,10 +62,7 @@ class LinkedList:
                 previous = current
                 current = current.next
         else:
-            return 'There is no value'
-
-
-
+            return 'Value is not in the list'
 
 
     def insert_after(self, value, new_value):
@@ -87,24 +76,26 @@ class LinkedList:
                     return self.__str__()
                 current = current.next
         else:
-            return 'There is no value'
+            return 'Value is not in the list'
 
-
+    def length_(self):
+        length = 0
+        current = self.head
+        while current:
+            length+=1
+            current = current.next
+        return length
 
     def kth_from_end(self, k):
         length = self.length_()
-
         if not -length <= k < length:
-            return "k not in the range"
-
+            raise Exception("k not in the range")
         step_count = None
-
         if k >= 0:
             step_count = length - k -1
         if k < 0:
             step_count = abs(k)-1
-
         current = self.head
-        for i in range(step_count):
+        for _ in range(step_count):
             current = current.next
         return current.value
