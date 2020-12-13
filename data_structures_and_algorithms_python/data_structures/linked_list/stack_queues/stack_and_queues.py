@@ -56,6 +56,7 @@ class Queue:
             self.rear.next = new_node
             self.rear = new_node
 
+
     def dequeue(self):
         if not self.is_empty():
             temp = self.front
@@ -64,8 +65,4 @@ class Queue:
             return temp.value
         else:
             return None
-
-    def peek(self):
-        if not self.is_empty():
-            return self.front.value
-        return None        
+       
