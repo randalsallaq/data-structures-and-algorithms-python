@@ -99,3 +99,4 @@ class LinkedList:
         for _ in range(step_count):
             current = current.next
         return current.value
+        
