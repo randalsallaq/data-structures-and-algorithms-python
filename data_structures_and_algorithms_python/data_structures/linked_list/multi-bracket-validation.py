@@ -18,5 +18,5 @@ def multibracketvalidation(input):
     else:
         return False
 
-print(multibracketvalidation('()[[Extra]]'))
-print(multibracketvalidation('{[]{(]})}'))
+print(multibracketvalidation('()[[Extra Characters]]'))
+print(multibracketvalidation('{[]{(])}}'))
