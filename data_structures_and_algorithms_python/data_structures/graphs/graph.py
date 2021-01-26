@@ -21,6 +21,13 @@ class Graph():
         br.enqueue(start)
         visited.add(start)
 
-        while len(br)
+        while len(br)> 0:
+            node = br.queue
+            nodes.append(node)
+            for i in list[node]:
+                if i not in visited_nodes:
+                    br.enqueue(n)
+                    visited_nodes.add(i)
+        return nodes
 
 
